@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="min-height: 100svh" class="container">
+    <header class="header">
+      <h1>
+        Her kan du spille <span style="color: rgb(255, 0, 0)">bondesjakk</span>
+      </h1>
+    </header>
+    <main class="main">
+      <div class="ui">
+        <input type="text" id="b1" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b2" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b3" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b4" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b5" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b6" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b7" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b8" onclick="makeMove(this.id)" readonly />
+        <input type="text" id="b9" onclick="makeMove(this.id)" readonly />
+      </div>
+      <p id="score"></p>
+      <button onclick="reset()">Omstart</button>
+    </main>
+    <footer class="footer">
+      <p>Copyright og den slags</p>
+    </footer>
+    <aside>
+      <nav>
+        <ul class="nav-links">
+          <li><a id="link_1" href="index.html">Hjem</a></li>
+          <li><a id="link_2" href="bondesjakk.html">Hvordan sløse tid</a></li>
+          <li>
+            <a id="link_3" href="how_to.html">Hvordan knytte skolisser</a>
+          </li>
+          <li><a id="link_4" href="kontakt_oss.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -188,3 +188,10 @@ li {
   border-bottom-style: none;
   border-right-style: none;
 }
+p1 {
+  margin: 0 0 10px 0;
+}
+p2 {
+  color: black;
+  margin: 0 0 10px 0;
+}

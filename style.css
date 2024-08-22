@@ -1,5 +1,7 @@
 * {
   border-width: 2px;
+  color: rgb(20, 20, 20);
+  font-style: sans-serif;
 }
 
 body {
@@ -110,6 +112,15 @@ li {
   grid-template-rows: 1fr 1fr 1fr;
   height: 300px;
   width: 300px;
+  margin: auto;
+}
+
+.xFelt {
+  color: blueviolet;
+}
+
+.oFelt {
+  color: aqua;
 }
 
 #b1 {

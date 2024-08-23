@@ -16,8 +16,8 @@ body {
     "sidebar main main"
     "sidebar main main"
     "footer footer footer";
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
+  /* grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr; */
   padding: 16px;
 }
 
@@ -47,6 +47,7 @@ body {
   grid-area: footer;
   border-top-style: solid;
   border-right-style: solid;
+  height: 80px;
 }
 
 .nav-links {

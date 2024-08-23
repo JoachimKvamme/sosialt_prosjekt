@@ -3,18 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hjem</title>
+    <title>minnespill</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body style="min-height: 100svh" class="container">
     <header class="header">
-      <h1>
-        En side med triviell <span style="color: #800080">kunnskap</span> og
-        <span style="color: #008000">aktiviteter</span>
-      </h1>
+      <h1>Lær hvordan man husker</h1>
     </header>
     <main class="main">
-      <p>Hjemside</p>
+        <div class="gridContainer">
+
+        </div>
+        <p>score: <span class="score"></span></span></p>
+        <div class="handlinger">
+            <button onclick="restart()">start på nytt</button>
+        </div>
+        <script src="minne.js"></script>
     </main>
     <footer class="footer">
       <p>Copyright og den slags</p>
@@ -28,7 +32,7 @@
             <a id="link_3" href="how_to.html">Hvordan knytte skolisser</a>
           </li>
           <li>
-            <a id="link_5" href="minne.html"> Hvordan får bedre minne</a>
+            <a id="link_5" href="minne.html"> Hvordan få bedre minne</a>
           </li>
           <li><a id="link_4" href="kontakt_oss.html">Kontakt</a></li>
         </ul>

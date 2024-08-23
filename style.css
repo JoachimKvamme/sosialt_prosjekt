@@ -6,11 +6,7 @@
 
 body {
   background-color: #faf9f6;
-}
-
-main {
-  min-height: auto;
-  min-width: auto;
+  min-height: 100svh;
 }
 
 .container {
@@ -30,6 +26,7 @@ main {
   border-bottom-style: solid;
   border-left-style: solid;
   padding: 16px;
+  height: 80px;
 }
 
 .main {
@@ -187,11 +184,4 @@ li {
   height: 100%;
   border-bottom-style: none;
   border-right-style: none;
-}
-p1 {
-  margin: 0 0 10px 0;
-}
-p2 {
-  color: black;
-  margin: 0 0 10px 0;
 }

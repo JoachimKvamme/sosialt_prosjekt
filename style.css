@@ -190,11 +190,11 @@ li {
   border-right-style: none;
 }
 
-.handlinger {
+.actions {
   display: flex;
   justify-content: center;
 }
-.handlinger button {
+.actions button {
   padding: 8px 16px;
   font-size: 30px;
   border-radius: 9px;
@@ -206,11 +206,11 @@ li {
   display: grid;
   justify-content: center;
   grid: gap 16px;
-  grid-template-columns: repeat(6, 70px);
-  grid-template-rows: repeat(2, calc(70px / 2 * 3));
+  grid-template-columns: repeat(5, 70px);
+  grid-template-rows: repeat(4, calc(70px / 2 * 3));
 }
 
-.kort {
+.kortet {
   width: 70px;
   height: calc(70px / 2 * 3);
   border-radius: 9px;
@@ -220,7 +220,7 @@ li {
   transition: all 0.5s ease-in-out;
 }
 
-.kortFram{
+.kortFramsideBilde{
   width: 30px;
   height: 30px;
 }
@@ -228,27 +228,25 @@ li {
 .kortAnimasjon{
   transform: rotateY(180deg)
 }
-.kortFram, .kortBak{
+.kortFramside, .kortBakside{
   backface-visibility: hidden;
   position:absolute;
   border-radius: 9px;
   top:0;
   left:0;
-  width: 50px;
-  height: 50px
-  ;
+  width: 100%;
+  height: 100%;
 }
 
-.kortFram, .kort{
+.kortFramside .kort{
   display:flex;
   justify-content: center;
   align-items: center;
-  transform rotateY(180deg)
+  transform: rotateY(180deg)
 }
 
-.card, .back{
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M10 0L0 10v10l10-10 10 10V10zm10 20v10l10-10 10 10V20L30 10z'  stroke-width='1' stroke='none' fill='hsla(197, 73%, 66%, 1)'/><path d='M10-20L0-10V0l10-10L20 0v-10L10-20zM20 0v10L30 0l10 10V0L30-10 20 0zM10 20L0 30v10l10-10 10 10V30L10 20zm10 20v10l10-10 10 10V40L30 30 20 40z'  stroke-width='1' stroke='none' fill='hsla(231, 48%, 48%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(-32,0)' fill='url(%23a)'/></svg>"));
-  /*skal prøve å endre til et image fra egen source senere*/
+.kort, .kortBakside{
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M20 0L0 10v10l20-10zm0 10v10l20 10V20z'  stroke-width='1' stroke='none' fill='hsla(258.5,59.4%,59.4%,1)'/><path d='M20-10V0l20 10V0zm0 30L0 30v10l20-10zm0 10v10l20 10V40z'  stroke-width='1' stroke='none' fill='hsla(198, 53%, 72%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   background-position: center center;
   background-size: cover;
   backface-visibility: hidden;

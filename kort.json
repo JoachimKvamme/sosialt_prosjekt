@@ -1,0 +1,51 @@
+[
+    {
+        "image": "./bilder_minnespill/abra.png",
+        "name":"abra"
+    },
+    
+    {
+        "image": "./bilder_minnespill/articuno.png",
+        "name":"articuno"
+    },
+    
+    {
+        "image": "./bilder_minnespill/haunter.png",
+        "name":"haunter"
+    },
+    
+    {
+        "image": "./bilder_minnespill/kirlia.png",
+        "name":"kirlia"
+    },
+    
+    {
+        "image": "./bilder_minnespill/magnetite.png",
+        "name":"magnetite"
+    },
+    
+    {
+        "image": "./bilder_minnespill/ratata.png",
+        "name":"ratata"
+    },
+    
+    {
+        "image": "./bilder_minnespill/togepi.png",
+        "name":"togepi"
+    },
+    
+    {
+        "image": "./bilder_minnespill/torchic.png",
+        "name":"torchic"
+    },
+    
+    {
+        "image": "./bilder_minnespill/whismur.png",
+        "name":"whismur"
+    },
+
+    {
+        "image": "./bilder_minnespill/zubat.png",
+        "name":"zubat.png"
+    }
+]

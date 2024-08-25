@@ -1,53 +1,56 @@
 * {
   border-width: 2px;
+  color: rgb(20, 20, 20);
+  font-style: sans-serif;
 }
 
 body {
   background-color: #faf9f6;
-}
-
-main {
-  min-height: auto;
-  min-width: auto;
+  min-height: 100svh;
 }
 
 .container {
   display: grid;
-  grid-template-areas:
-    "header header header"
-    "sidebar main main"
-    "sidebar main main"
-    "footer footer footer";
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  /* grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr; */
   padding: 16px;
 }
 
 .header {
-  grid-area: header;
+  grid-column: 1/5;
+  grid-row: 1/2;
   border-bottom-style: solid;
   border-left-style: solid;
   padding: 16px;
 }
 
 .main {
-  grid-area: main;
-  border-left-style: solid;
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
   padding: 16px;
+  min-height: 70svh;
 }
 
 .sidebar {
   padding: none;
-  grid-area: sidebar;
+  grid-column: 1/2;
+  grid-row: 2/4;
   flex-direction: column;
   justify-content: space-between;
   display: flex;
+  width: 180px;
+  border-right-style: solid;
+  border-right-color: black;
 }
 
 .footer {
-  grid-area: footer;
+  grid-row: 4/5;
+  grid-column: 1/5;
   border-top-style: solid;
   border-right-style: solid;
+  height: 80px;
 }
 
 .nav-links {
@@ -110,6 +113,15 @@ li {
   grid-template-rows: 1fr 1fr 1fr;
   height: 300px;
   width: 300px;
+  margin: auto;
+}
+
+.xFelt {
+  color: blueviolet;
+}
+
+.oFelt {
+  color: aqua;
 }
 
 #b1 {
@@ -177,10 +189,67 @@ li {
   border-bottom-style: none;
   border-right-style: none;
 }
-p1 {
-  margin: 0 0 10px 0;
+
+.handlinger {
+  display: flex;
+  justify-content: center;
 }
-p2 {
-  color: black;
-  margin: 0 0 10px 0;
+.handlinger button {
+  padding: 8px 16px;
+  font-size: 30px;
+  border-radius: 9px;
+  background-color: rgb(114, 196, 255);
+  color: rgb(250, 250, 250);
+}
+
+.gridContainer {
+  display: grid;
+  justify-content: center;
+  grid: gap 16px;
+  grid-template-columns: repeat(6, 70px);
+  grid-template-rows: repeat(2, calc(70px / 2 * 3));
+}
+
+.kort {
+  width: 70px;
+  height: calc(70px / 2 * 3);
+  border-radius: 9px;
+  background-color: white;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.kortFram{
+  width: 30px;
+  height: 30px;
+}
+
+.kortAnimasjon{
+  transform: rotateY(180deg)
+}
+.kortFram, .kortBak{
+  backface-visibility: hidden;
+  position:absolute;
+  border-radius: 9px;
+  top:0;
+  left:0;
+  width: 50px;
+  height: 50px
+  ;
+}
+
+.kortFram, .kort{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transform rotateY(180deg)
+}
+
+.card, .back{
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M10 0L0 10v10l10-10 10 10V10zm10 20v10l10-10 10 10V20L30 10z'  stroke-width='1' stroke='none' fill='hsla(197, 73%, 66%, 1)'/><path d='M10-20L0-10V0l10-10L20 0v-10L10-20zM20 0v10L30 0l10 10V0L30-10 20 0zM10 20L0 30v10l10-10 10 10V30L10 20zm10 20v10l10-10 10 10V40L30 30 20 40z'  stroke-width='1' stroke='none' fill='hsla(231, 48%, 48%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(-32,0)' fill='url(%23a)'/></svg>"));
+  /*skal prøve å endre til et image fra egen source senere*/
+  background-position: center center;
+  background-size: cover;
+  backface-visibility: hidden;
 }

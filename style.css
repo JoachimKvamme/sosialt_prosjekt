@@ -225,9 +225,10 @@ li {
   height: 30px;
 }
 
-.kortAnimasjon{
+.kortet.flipped{
   transform: rotateY(180deg)
 }
+
 .kortFramside, .kortBakside{
   backface-visibility: hidden;
   position:absolute;

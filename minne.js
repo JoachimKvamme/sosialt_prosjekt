@@ -1,15 +1,15 @@
-const gridContainer = document.querySelector(".gridContainer");
+const gridContainer = document.querySelector(".grid-container");
 let kort = [];
 let forsteKort, andreKort; //navn for første og andre valg av kort
-let laasbrett = false
+let laasBrett = false
 let score = 0;
 
 document.querySelector(".score").textContent = score;
 
 fetch("kort.json")//henter info om bilder fra kort.json
  .then((res) => res.json())
- .then((data) =>{
-    cards = [...data, ...data];
+ .then((data) => {
+    kort = [...data, ...data];
     stokkKort();
     delUtKort();
  });
@@ -28,9 +28,9 @@ fetch("kort.json")//henter info om bilder fra kort.json
  }
 
  function delUtKort() { //legger til funksjon for delUtKort
-    for (let kortet of kort){
+    for (let kortet of kort) {
         const kortElement = document.createElement("div")
-        kortElement.classliste.add("kortet");
+        kortElement.classlist.add("kortet");
         kortElement.setAttribute("data-name", kortet.name);
         kortElement.innerHTML = `
         <div class="kortFramside">
@@ -40,15 +40,15 @@ fetch("kort.json")//henter info om bilder fra kort.json
 
             </div>
         `;
-        gridContainer.appendChild(cardElement);
+        gridContainer.appendChild(kortElement);
         kortElement.addEventListener("click", snuKort)
     }
  }
 
  function snuKort() {
-    if (laasbrett) return;
+    if (laasBrett) return;
     if (this === forsteKort) return;
-    this.classliste.add("flipped");
+    this.classlist.add("flipped");
     if(!forsteKort){
         forsteKort = this;
         return;
@@ -57,7 +57,7 @@ fetch("kort.json")//henter info om bilder fra kort.json
     andreKort = this;
     score++;
     document.querySelector(".score").textContent = score;
-    laasbrett = true;
+    laasBrett = true;
 
     sjekkOmMake();
  }
@@ -76,8 +76,8 @@ fetch("kort.json")//henter info om bilder fra kort.json
 
  function snuTilbakeKort() {
     setTimeout(() => {
-        forsteKort.classliste.remove("flipped");
-        andreKort.classliste.remove("flipped");
+        forsteKort.classlist.remove("flipped");
+        andreKort.classlist.remove("flipped");
         resetBrett();
     }, 1000)
  }
@@ -85,7 +85,7 @@ fetch("kort.json")//henter info om bilder fra kort.json
  function resetBrett() {
     forsteKort = null;
     andreKort = null;
-    laasbrett = false;
+    laasBrett = false;
 
  }
 
